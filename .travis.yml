@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- node
+before_deploy:
+- npm run build
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: bruno.krebs@digituz.com.br
+  api_key:
+    secure: eZ8P+Z5ULP7hyWFUbPhPHxgT6vGX20m6TC0ka/sx9yabPBrOOOm6K/8HRGRZqxVxk6vJLR8vmqGlsrjkpPwmiG3U8QvXYFAt5N5xP0NMvozRoubn1pUEn8tXbr445DIp270Rgeab/n+qDgL4Sc5+4oOVlGfEowD5TGP3WZVEHBktbVWwYeLzmkNJcVkCG2E7qb0yG7S+jP1bZOaao6//wkD/j632lp06fKLGhhm9pMcx0U1mY37DRVdAPZjHx8pWelyWlq59AcHB9V+ltq0fvxarJwE8cU9mIsBa8RpSwDA5tZzey0t77uKGlRcTI6IgrKAWvfe81Kt6gbAw7ZbcF/lzbRPoxLb5wb27zcBfdBPTCBJrbGfdh5jjOV5WPzuvyJe2hILIBiJuA2r3rm5/LRWGcCOvbZUovFjgzcLQXXhEW+BmgyfSw67w3TcdUr+ZnXRFF8pGt3/YBQ+P+gk8w/4BKamTVnUvExzppJ5Wm/L8I/8K7gXdTWSfYK9yUA4r5Qgu7PtQXk11C9kKdV19Hkq9E0LLMwunlhG9kcqN5jKkVhpNsonABYSaJVOkEEU5Xj4+/M6Pe48xeJzOZ1C0Kgj9QTWhqwuSGc5LO2LC94k8s9SuAB87A7x+ONujjVJePUS5qR0PGo/cQzMi54pDVpILifjVF4GbV6hJlBcxpW8=
+  on:
+    tags: true
+    repo: digituz-corp/masks-js
